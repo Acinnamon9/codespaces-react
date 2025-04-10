@@ -1,0 +1,78 @@
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  .display {
+    background-color: #333; /* Dark display background */
+    color: white;
+    font-size: 2.5em; /* Larger font size */
+    padding: 20px;
+    text-align: right;
+    font-family: 'Arial', sans-serif;
+    min-height: 1.5em; /* Ensure minimum height */
+    overflow-wrap: break-word; /* Wrap long numbers */
+  }
+  
+  .keypad {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .keypad-row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .key {
+    flex: 1 1 25%; /* Each button takes 25% width */
+    padding: 20px 0; /* Vertical padding */
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #e0e0e0; /* Default key background */
+    transition: background-color 0.2s;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+  }
+  
+  .key:hover {
+    background-color: #d5d5d5; /* Lighter grey on hover */
+  }
+  
+  .key:active {
+      background-color: #bbb; /* Even lighter grey when pressed */
+  }
+  
+  .key.function {
+    background-color: #d6d6d6; /* Slightly different grey for function keys */
+  }
+  .key.function:hover {
+    background-color: #c0c0c0;
+  }
+  .key.function:active {
+    background-color: #aeaeae;
+  }
+  
+  
+  .key.operator {
+    background-color: #f5923e; /* Orange for operators */
+    color: white;
+  }
+  .key.operator:hover {
+    background-color: #f48024;
+  }
+  .key.operator:active {
+    background-color: #d97221;
+  }
+  
+  
+  .key.zero {
+    flex-grow: 2; /* Make the zero button wider */
+    flex-basis: 50%; /* Take up 50% width */
+  }
